@@ -1,0 +1,9 @@
+This file is a placeholder to ensure the public directory exists. This directory will store all the images for the website.
+
+Images needed:
+- Hero images for homepage and route pages
+- Vehicle images for the fleet page
+- Team member photos for the about page
+- Any other imagery needed for the website
+
+Replace this file with actual images when they are available.
