@@ -97,16 +97,17 @@ export default function Home() {
       </section>
 
       {/* Popular Routes Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="relative w-full">
+        <PopularRoutesCarousel />
+      </section>
+      {/* <section className="py-20 bg-gray-50">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12 px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Chart Your Next <span className="text-indigo-600">Adventure</span></h2>
             <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">From the majestic Himalayas to the royal deserts, your next story begins here.</p>
           </div>
           
-          {/* Destination Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 px-4">
-            {/* Himachal Card */}
             <Link href="/routes/delhi-to-himachal" className="flex flex-col items-center group">
               <div className="relative w-full aspect-[16/9] sm:aspect-[4/3] lg:aspect-[3/4] rounded-2xl md:rounded-[30px] overflow-hidden mb-2 transition-transform duration-300 lg:group-hover:scale-105">
                 <Image src="/himachal.avif" alt="Himachal Pradesh" fill className="object-cover" />
@@ -117,7 +118,6 @@ export default function Home() {
               <p className="font-medium text-gray-800 group-hover:text-indigo-600 text-xs sm:text-sm md:text-base">Himachal</p>
             </Link>
             
-            {/* Uttarakhand Card */}
             <Link href="/routes/delhi-to-uttarakhand" className="flex flex-col items-center group">
               <div className="relative w-full aspect-[16/9] sm:aspect-[4/3] lg:aspect-[3/4] rounded-2xl md:rounded-[30px] overflow-hidden mb-2 transition-transform duration-300 lg:group-hover:scale-105">
                 <Image src="/uttarakhand.webp" alt="Uttarakhand" fill className="object-cover" />
@@ -128,7 +128,6 @@ export default function Home() {
               <p className="font-medium text-gray-800 group-hover:text-indigo-600 text-xs sm:text-sm md:text-base">Uttarakhand</p>
             </Link>
             
-            {/* Rajasthan Card */}
             <Link href="/routes/delhi-to-rajasthan" className="flex flex-col items-center group md:col-span-2 lg:col-span-1">
               <div className="relative w-full aspect-[16/9] sm:aspect-[4/3] lg:aspect-[3/4] rounded-2xl md:rounded-[30px] overflow-hidden mb-2 transition-transform duration-300 lg:group-hover:scale-105">
                 <Image src="/jaipur.png" alt="Rajasthan" fill className="object-cover" />
@@ -139,7 +138,6 @@ export default function Home() {
               <p className="font-medium text-gray-800 group-hover:text-indigo-600 text-xs sm:text-sm md:text-base">Rajasthan</p>
             </Link>
             
-            {/* Punjab Card */}
             <Link href="/routes/delhi-to-punjab" className="flex flex-col items-center group">
               <div className="relative w-full aspect-[16/9] sm:aspect-[4/3] lg:aspect-[3/4] rounded-2xl md:rounded-[30px] overflow-hidden mb-2 transition-transform duration-300 lg:group-hover:scale-105">
                 <Image src="/amritsar.png" alt="Punjab" fill className="object-cover" />
@@ -150,7 +148,6 @@ export default function Home() {
               <p className="font-medium text-gray-800 group-hover:text-indigo-600 text-xs sm:text-sm md:text-base">Punjab</p>
             </Link>
             
-            {/* UP Card */}
             <Link href="/routes/delhi-to-up" className="flex flex-col items-center group">
               <div className="relative w-full aspect-[16/9] sm:aspect-[4/3] lg:aspect-[3/4] rounded-2xl md:rounded-[30px] overflow-hidden mb-2 transition-transform duration-300 lg:group-hover:scale-105">
                 <Image src="/varanasi.png" alt="Uttar Pradesh" fill className="object-cover" />
@@ -162,7 +159,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* How It Works Section */}
       <section className="py-20 bg-white">
@@ -267,7 +264,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Traveler Image */}
             <div className="relative">
@@ -288,7 +285,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
             {/* Testimonial Content */}
             <div className="bg-white p-8 rounded-3xl shadow-lg relative">
               <div className="absolute -top-8 left-8 bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center">
