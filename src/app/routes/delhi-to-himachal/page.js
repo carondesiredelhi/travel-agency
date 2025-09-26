@@ -1,11 +1,7 @@
+"use client";
+import TimedCards from '@/components/TimedCard/TimedCard';
 import Image from 'next/image';
 import Link from 'next/link';
-
-export const metadata = {
-  title: 'Delhi to Himachal Pradesh Travel Services | Premium Fleet Options',
-  description: 'Premium travel services from Delhi to Himachal Pradesh with luxury fleet options. Visit Shimla, Manali, Dharamshala, and more with our comfortable vehicles.',
-  keywords: 'delhi to himachal, himachal travel, shimla travel, manali travel, dharamshala travel, dalhousie travel'
-};
 
 export default function DelhiToHimachal() {
   // Pricing data for different vehicles
@@ -148,6 +144,18 @@ export default function DelhiToHimachal() {
       </section>
 
       {/* Popular Destinations */}
+      <TimedCards
+        items={destinations.map(d => ({
+          place: 'Himachal Pradesh',
+          title: (d.name || '').toUpperCase(),
+          title2: '',
+          description: d.description,
+          image: d.image
+        }))}
+        showNav={false}
+        showPagination={true}
+      />
+      {/*
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Popular <span className="text-green-600">Destinations</span></h2>
@@ -185,7 +193,8 @@ export default function DelhiToHimachal() {
             ))}
           </div>
         </div>
-      </section>
+      </section> 
+      */}
 
       {/* Pricing Table */}
       <section className="py-16">
