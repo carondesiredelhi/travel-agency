@@ -49,6 +49,9 @@ export default function Header() {
             <Link href="/fleet" className="text-gray-600 hover:text-yellow-600 transition-colors duration-300">
               Our Fleet
             </Link>
+            <Link href="/catalogues" className="text-gray-600 hover:text-yellow-600 transition-colors duration-300">
+              Catalogues
+            </Link>
             <Link href="/about" className="text-gray-600 hover:text-yellow-600 transition-colors duration-300">
               About Us
             </Link>
@@ -95,6 +98,9 @@ export default function Header() {
                   </Link>
                 </div>
               </div>
+              <Link href="/catalogues" className="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-200">
+                Catalogues
+              </Link>
               <Link href="/fleet" className="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-200">
                 Our Fleet
               </Link>
