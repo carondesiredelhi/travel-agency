@@ -80,6 +80,30 @@ export default function PopularRoutesCarousel({ routes = defaultRoutes }) {
     emblaApi.on('select', onSelect);
   }, [emblaApi, onSelect]);
 
+  // Auto-scroll functionality
+  useEffect(() => {
+    if (!emblaApi) return;
+    let autoScrollInterval = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 4000); // 4 seconds
+
+    // Pause auto-scroll on user interaction, resume after 6s
+    const pauseAutoScroll = () => {
+      clearInterval(autoScrollInterval);
+      autoScrollInterval = setInterval(() => {
+        emblaApi.scrollNext();
+      }, 4000);
+    };
+    emblaApi.on('pointerDown', pauseAutoScroll);
+    emblaApi.on('scroll', pauseAutoScroll);
+
+    return () => {
+      clearInterval(autoScrollInterval);
+      emblaApi.off('pointerDown', pauseAutoScroll);
+      emblaApi.off('scroll', pauseAutoScroll);
+    };
+  }, [emblaApi]);
+
   return (
     <div className="relative">
       <div className="overflow-hidden" ref={emblaRef}>

@@ -10,11 +10,11 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Image 
-                src="/logo-white.svg" 
+                src="/logo.png" 
                 alt="Delhi Premium Travel" 
                 width={40} 
                 height={40} 
-                className="w-10 h-10"
+                className="w-10 h-10 invert"
               />
               <span className="text-xl font-bold">Delhi Premium Travel</span>
             </div>

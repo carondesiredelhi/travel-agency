@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import PopularRoutesCarousel from '@/components/PopularRoutesCarousel';
 
 export const metadata = {
   title: 'Delhi to Uttarakhand Travel Services | Premium Fleet Options',
@@ -148,44 +149,7 @@ export default function DelhiToUttarakhand() {
       </section>
 
       {/* Popular Destinations */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Popular <span className="text-indigo-600">Destinations</span></h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {destinations.map((destination, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
-                <div className="relative h-64 md:h-auto md:w-2/5">
-                  <Image 
-                    src={destination.image} 
-                    alt={destination.name} 
-                    fill 
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6 md:w-3/5">
-                  <h3 className="text-xl font-bold mb-2">{destination.name}</h3>
-                  <p className="text-gray-600 mb-4">{destination.description}</p>
-                  <div className="flex flex-wrap gap-4 text-sm text-gray-700">
-                    <div className="flex items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-indigo-600 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      </svg>
-                      {destination.distance}
-                    </div>
-                    <div className="flex items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-indigo-600 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      {destination.travelTime}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PopularRoutesCarousel routes={destinations} />
 
       {/* Pricing Table */}
       <section className="py-16">

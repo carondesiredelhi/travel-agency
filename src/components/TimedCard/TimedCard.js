@@ -27,11 +27,26 @@ export default function TimedCards({ items = [], showNav = false, showPagination
     const isAnimating = useRef(false);
     const timeoutId = useRef(null);
 
+    // Add a state to track loaded images
+    const [imageLoaded, setImageLoaded] = useState(Array(items.length).fill(false));
 
+    // Update imageLoaded state when each image is loaded
     useEffect(() => {
-        const loadImage = (src) => new Promise((resolve, reject) => {
-            const img = new Image();
-            img.onload = () => resolve(img);
+        setImageLoaded(Array(items.length).fill(false));
+    }, [items]);
+
+    // Preload images and fade out cover after all are loaded
+    useEffect(() => {
+        const loadImage = (src, idx) => new Promise((resolve, reject) => {
+            const img = new window.Image();
+            img.onload = () => {
+                setImageLoaded(prev => {
+                    const next = [...prev];
+                    next[idx] = true;
+                    return next;
+                });
+                resolve(img);
+            };
             img.onerror = reject;
             img.src = src;
         });
@@ -39,10 +54,16 @@ export default function TimedCards({ items = [], showNav = false, showPagination
         const loadImages = async () => {
             try {
                 if (!items || items.length === 0) return setIsLoaded(true);
-                await Promise.all(items.map(({ image }) => loadImage(image)));
-                setIsLoaded(true);
+                await Promise.all(items.map(({ image }, idx) => loadImage(image, idx)));
+                // Fade out cover after all images loaded
+                if (coverRef.current) {
+                    gsap.to(coverRef.current, { opacity: 0, duration: 0.5, onComplete: () => setIsLoaded(true) });
+                } else {
+                    setIsLoaded(true);
+                }
             } catch (error) {
                 console.error("One or more images failed to load", error);
+                setIsLoaded(true);
             }
         };
 
@@ -208,7 +229,8 @@ export default function TimedCards({ items = [], showNav = false, showPagination
                  }, 0);
             // Fade overlay slightly during transition and back to 1
             if (activeOverlayRef.current) {
-                gsap.to(activeOverlayRef.current, { opacity: 0.9, duration: 0.3, ease }, 0)
+                gsap.timeline()
+                    .to(activeOverlayRef.current, { opacity: 0.9, duration: 0.3, ease }, 0)
                     .to(activeOverlayRef.current, { opacity: 1, duration: 0.3, ease }, 0.3);
             }
         };
@@ -328,8 +350,19 @@ export default function TimedCards({ items = [], showNav = false, showPagination
                             id={`card${index}`}
                             className={styles.card}
                             ref={el => cardRefs.current[index] = el}
-                            style={{ backgroundImage: `url(${item.image})` }}
-                        ></div>
+                            style={{
+                                backgroundImage: imageLoaded[index] ? `url(${item.image})` : 'none',
+                                backgroundColor: imageLoaded[index] ? undefined : '#222',
+                                transition: 'background-image 0.3s, background-color 0.3s'
+                            }}
+                        >
+                            {/* Optionally, show a spinner or placeholder while loading */}
+                            {!imageLoaded[index] && (
+                                <div style={{width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                    <span style={{color: '#fff', fontSize: 24}}>Loading...</span>
+                                </div>
+                            )}
+                        </div>
                         <div
                             id={`card-content-${index}`}
                             className={styles.cardContent}
