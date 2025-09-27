@@ -1,5 +1,5 @@
 "use client";
-import TimedCards from '@/components/TimedCard/TimedCard';
+import PopularRoutesCarousel from '@/components/PopularRoutesCarousel';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -144,17 +144,7 @@ export default function DelhiToHimachal() {
       </section>
 
       {/* Popular Destinations */}
-      <TimedCards
-        items={destinations.map(d => ({
-          place: 'Himachal Pradesh',
-          title: (d.name || '').toUpperCase(),
-          title2: '',
-          description: d.description,
-          image: d.image
-        }))}
-        showNav={false}
-        showPagination={true}
-      />
+      <PopularRoutesCarousel routes={destinations} />
       {/*
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">

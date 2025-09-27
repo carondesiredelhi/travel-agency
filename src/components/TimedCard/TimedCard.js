@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import gsap from 'gsap';
 import styles from './TimedCards.module.css';
 
@@ -232,22 +233,48 @@ export default function TimedCards({ items = [], showNav = false, showPagination
     
     }, [isLoaded, items, showNav, showPagination]);
     
-    const Details = ({ item, ...props }) => (
-        <div className={styles.details} {...props}>
-             <div className={styles.placeBox}><div className={`${styles.text} text`}>{item.place}</div></div>
-             <div className={styles.titleBox1}><div className={`${styles.title1} title-1`}>{item.title}</div></div>
-             <div className={styles.titleBox2}><div className={`${styles.title2} title-2`}>{item.title2}</div></div>
-             <div className={`${styles.desc} desc`}>{item.description}</div>
-             <div className={`${styles.cta} cta`}>
-                 <button className={styles.bookmark}>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path fillRule="evenodd" d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z" clipRule="evenodd" />
-                    </svg>
-                 </button>
-                 <button className={styles.discover}>Discover Location</button>
-             </div>
-        </div>
-    );
+    const Details = ({ item, ...props }) => {
+        // Generate route URL based on place name
+        const getRouteUrl = (place) => {
+            const routeMap = {
+                'Uttarakhand': '/routes/delhi-to-uttarakhand',
+                'Himachal Pradesh': '/routes/delhi-to-himachal',
+                'Rajasthan': '/routes/delhi-to-rajasthan',
+                'Uttar Pradesh': '/routes/delhi-to-up',
+                'Punjab': '/routes/delhi-to-punjab'
+            };
+            return routeMap[place] || '#';
+        };
+
+        // Generate Google Maps URL based on place name
+        const getGoogleMapsUrl = (place) => {
+            const mapsUrl = {
+                'Uttarakhand': 'https://maps.google.com/maps?q=Uttarakhand,+India',
+                'Himachal Pradesh': 'https://maps.google.com/maps?q=Himachal+Pradesh,+India',
+                'Rajasthan': 'https://maps.google.com/maps?q=Rajasthan,+India',
+                'Uttar Pradesh': 'https://maps.google.com/maps?q=Uttar+Pradesh,+India',
+                'Punjab': 'https://maps.google.com/maps?q=Punjab,+India'
+            };
+            return mapsUrl[place] || 'https://maps.google.com';
+        };
+
+        return (
+            <div className={styles.details} {...props}>
+                 <div className={styles.placeBox}><div className={`${styles.text} text`}>{item.place}</div></div>
+                 <div className={styles.titleBox1}><div className={`${styles.title1} title-1`}>{item.title}</div></div>
+                 <div className={styles.titleBox2}><div className={`${styles.title2} title-2`}>{item.title2}</div></div>
+                 <div className={`${styles.desc} desc`}>{item.description}</div>
+                 <div className={`${styles.cta} cta`}>
+                     <a href={getGoogleMapsUrl(item.place)} target="_blank" rel="noopener noreferrer" className={styles.bookmark}>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                        </svg>
+                     </a>
+                     <Link href={getRouteUrl(item.place)} className={`${styles.discover} flex items-center`}>Discover Location</Link>
+                 </div>
+            </div>
+        );
+    };
 
     // Manual controls
     const handleNext = () => {
