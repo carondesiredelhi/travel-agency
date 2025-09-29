@@ -233,6 +233,28 @@ export default function TimedCards({ items = [], showNav = false, showPagination
                     .to(activeOverlayRef.current, { opacity: 0.9, duration: 0.3, ease }, 0)
                     .to(activeOverlayRef.current, { opacity: 1, duration: 0.3, ease }, 0.3);
             }
+            rest.forEach((i, index) => {
+                if (i !== prv) {
+                    gsap.set(cardRefs.current[i], {
+                        x: offsetLeft + index * (cardWidth + gap),
+                        y: offsetTop,
+                        width: cardWidth,
+                        height: cardHeight,
+                        zIndex: 30,
+                        scale: 1,
+                        opacity: 1,
+                        borderRadius: 10
+                    });
+                    gsap.set(cardContentRefs.current[i], {
+                        x: offsetLeft + index * (cardWidth + gap),
+                        y: offsetTop + cardHeight - 100,
+                        opacity: 1,
+                        zIndex: 40
+                    });
+                    gsap.set(slideItemRefs.current[i], { x: (index + 1) * numberSize });
+                }
+            });
+
         };
         stepRef.current = step;
         
@@ -406,8 +428,7 @@ export default function TimedCards({ items = [], showNav = false, showPagination
                     </div>
                 </div>
             )}
-            
-            {isLoaded && <div className={styles.cover} ref={coverRef}></div>}
+
         </div>
     );
 }
