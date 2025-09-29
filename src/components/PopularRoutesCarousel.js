@@ -119,7 +119,7 @@ export default function PopularRoutesCarousel({ routes = defaultRoutes }) {
         <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
           <div className={`max-w-2xl pr-2 sm:pr-4 md:pr-8 lg:pr-12 transition-all duration-500 ease-out will-change-transform will-change-opacity ${textAnimating ? 'opacity-0 translate-y-3' : 'opacity-100 translate-y-0'}`}>
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white drop-shadow mb-3 sm:mb-4">
-              {routes[selectedIndex].title || `Delhi to ${routes[selectedIndex].name}`}
+              {routes[selectedIndex].title || `${routes[selectedIndex].name}`}
             </h3>
             <p className="text-white/90 text-base sm:text-lg md:text-xl mb-4">
               {routes[selectedIndex].description}
