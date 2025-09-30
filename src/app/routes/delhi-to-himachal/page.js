@@ -20,7 +20,7 @@ const himachalRoutes = [
         nights: "3N/4D or 6N/7D",
     },
     {
-        name: "Dharamshala & Dalhousie",
+        name: "Dharamshala",
         image: "/dharamshala.png",
         description:
             "Spiritual Dharamshala and scenic Dalhousie with Khajjiar – Mini Switzerland of India.",
