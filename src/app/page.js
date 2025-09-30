@@ -136,11 +136,11 @@ export default function Home() {
           </div>
           <TimedCards
             items={[
-              { place: 'Uttarakhand', title: 'DELHI TO', title2: 'UTTARAKHAND', description: 'Explore majestic mountains and spiritual retreats in the land of gods.', image: '/uttarakhand.webp' },
-              { place: 'Himachal Pradesh', title: 'DELHI TO', title2: 'HIMACHAL', description: 'Discover scenic beauty and thrilling adventures in the Himalayan valleys.', image: '/himachal.avif' },
-              { place: 'Rajasthan', title: 'DELHI TO', title2: 'RAJASTHAN', description: 'Experience royal heritage and vast deserts in the land of kings.', image: '/rajasthan.png' },
-              { place: 'Uttar Pradesh', title: 'DELHI TO', title2: 'UP', description: 'Witness the timeless beauty of the Taj Mahal and cultural heritage.', image: '/varanasi.png' },
-              { place: 'Punjab', title: 'DELHI TO', title2: 'PUNJAB', description: 'Immerse in the vibrant culture and history of the golden state.', image: '/punjab-hero.webp' }
+              { place: 'Uttarakhand', title: 'JOURNEY TO', title2: 'UTTARAKHAND', description: 'Explore majestic mountains and spiritual retreats in the land of gods.', image: '/uttarakhand.webp' },
+              { place: 'Himachal Pradesh', title: 'JOURNEY TO', title2: 'HIMACHAL', description: 'Discover scenic beauty and thrilling adventures in the Himalayan valleys.', image: '/himachal.avif' },
+              { place: 'Rajasthan', title: 'JOURNEY TO', title2: 'RAJASTHAN', description: 'Experience royal heritage and vast deserts in the land of kings.', image: '/rajasthan.png' },
+              { place: 'Uttar Pradesh', title: 'JOURNEY TO', title2: 'UP', description: 'Witness the timeless beauty of the Taj Mahal and cultural heritage.', image: '/varanasi.png' },
+              { place: 'Punjab', title: 'JOURNEY TO', title2: 'PUNJAB', description: 'Immerse in the vibrant culture and history of the golden state.', image: '/punjab-hero.webp' }
             ]}
             showNav={false}
             showPagination={true}

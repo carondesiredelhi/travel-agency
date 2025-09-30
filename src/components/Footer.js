@@ -57,7 +57,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/routes" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Popular Routes
+                  Routes
+                </Link>
+              </li>
+              <li>
+                <Link href="/catalogues" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Catalogues
                 </Link>
               </li>
               <li>
@@ -79,27 +84,27 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/routes/delhi-to-uttarakhand" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Delhi to Uttarakhand
+                  Journey to Uttarakhand
                 </Link>
               </li>
               <li>
                 <Link href="/routes/delhi-to-himachal" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Delhi to Himachal
+                  Journey to Himachal
                 </Link>
               </li>
               <li>
                 <Link href="/routes/delhi-to-rajasthan" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Delhi to Rajasthan
+                  Journey to Rajasthan
                 </Link>
               </li>
               <li>
                 <Link href="/routes/delhi-to-up" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Delhi to UP
+                  Journey to UP
                 </Link>
               </li>
               <li>
                 <Link href="/routes/delhi-to-punjab" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Delhi to Punjab
+                  Journey to Punjab
                 </Link>
               </li>
             </ul>
@@ -115,7 +120,16 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <span className="text-gray-400">
-                  123 Travel Plaza, Connaught Place, New Delhi, 110001
+                  L-320, Ground floor, Mahipalpur, <br/> IGI Airport, New Delhi, India.
+                </span>
+              </li>
+              <li className="flex items-start">
+                <svg className="h-6 w-6 mr-2 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span className="text-gray-400">
+                  14/2, sector 45, Chandigarh, India.
                 </span>
               </li>
               <li className="flex items-start">
@@ -136,7 +150,7 @@ export default function Footer() {
         
         {/* Copyright */}
         <div className="pt-8 mt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Delhi Premium Travel. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} CarOnDesire. All rights reserved.</p>
         </div>
       </div>
     </footer>

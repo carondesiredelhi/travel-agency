@@ -49,7 +49,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Our Location</h3>
-                    <p className="text-gray-600">123 Travel Plaza, Connaught Place<br />New Delhi, 110001, India</p>
+                    <p className="text-gray-600">L-320, Ground floor, Mahipalpur, <br/> IGI Airport, New Delhi, India.</p>
+                    <br/>
+                    <p className="text-gray-600">14/2, sector 45, Chandigarh, India.</p>
                   </div>
                 </div>
                 
