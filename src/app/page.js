@@ -17,7 +17,7 @@ export default function Home() {
       <section className="min-h-screen relative flex items-center justify-end overflow-hidden pt-20">
         <div className="absolute inset-0">
           <Image 
-            src="/hero.jpg" 
+            src="/hero.jpeg" 
             alt="Beautiful Indian destination" 
             fill 
             className="object-cover"
@@ -143,7 +143,7 @@ export default function Home() {
               { place: 'Punjab', title: 'JOURNEY TO', title2: 'PUNJAB', description: 'Immerse in the vibrant culture and history of the golden state.', image: '/punjab-hero.webp' }
             ]}
             showNav={false}
-            showPagination={true}
+            showPagination={false}
           />
         </div>
       </section>
