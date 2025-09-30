@@ -194,9 +194,7 @@ export default function Contact() {
           <div className="bg-white p-4 rounded-xl shadow-lg overflow-hidden animate-slide-up delay-100">
             <div className="relative h-[400px] w-full">
               {/* Replace with actual map component or embed */}
-              <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                <p className="text-gray-500">Google Map Embed Would Go Here</p>
-              </div>
+              <iframe src="https://www.google.com/maps/d/embed?mid=17_s_A9tqK7jus_rhRnxoFUJNwWs5KpA&ehbc=2E312F" className='h-full w-full'></iframe>
             </div>
           </div>
         </div>
