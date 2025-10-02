@@ -40,7 +40,7 @@ export default function DelhiToPunjab() {
       multiDay: '₹8,000/day'
     },
     {
-      vehicle: 'Arvenia',
+      vehicle: 'Urbania',
       capacity: '5 Passengers',
       oneWay: '₹9,000',
       roundTrip: '₹17,000',
