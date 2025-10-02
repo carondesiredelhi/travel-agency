@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Our Premium Fleet | Delhi Travel Agency',
-  description: 'Explore our premium fleet of vehicles including Sedan, SUV, MUV, Arvenia, and Tempo Traveller for your comfortable journey from Delhi.',
-  keywords: 'travel fleet, sedan, suv, muv, arvenia, tempo traveller, delhi travel, luxury vehicles'
+  description: 'Explore our premium fleet of vehicles including Sedan, SUV, MUV, Urbania, and Tempo Traveller for your comfortable journey from Delhi.',
+  keywords: 'travel fleet, sedan, suv, muv, urbania, tempo traveller, delhi travel, luxury vehicles'
 };
 
 export default function Fleet() {
@@ -32,8 +32,8 @@ export default function Fleet() {
       idealFor: 'Large Families, Extended Groups, Long Journeys'
     },
     {
-      name: 'Arvenia',
-      image: '/arvenia.png',
+      name: 'Urbania',
+      image: '/urbania.png',
       description: 'Premium luxury vehicles with enhanced comfort features for those who seek a touch of elegance in their journey.',
       features: ['5 Passengers', 'Premium Air Conditioning', '4 Luggage Capacity', 'Leather Seating', 'Advanced Entertainment System'],
       idealFor: 'Luxury Travelers, Corporate Executives, Special Occasions'

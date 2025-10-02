@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Hero Section - No changes needed, already consistent */}
-      <section className="min-h-screen relative flex items-center justify-end overflow-hidden pt-20">
+      <section className="min-h-screen relative flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0">
           <Image 
             src="/hero.jpeg" 
@@ -23,42 +23,40 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/10"></div>
+          <div className="absolute inset-0 bg-black/20"></div>
         </div>
 
         <div className="relative z-10 text-left text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-5xl">
           <div className="mb-6 md:mb-8">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-none tracking-tight">
-              <span className="block">WORLD</span>
-              <span className="block">
-                OF <span className="text-transparent" style={{ WebkitTextStroke: "2px white", textStroke: "2px white" }}>PARADISE,</span>
-              </span>
-              <span className="block text-white">INDIA</span>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-bold  tracking-tight">
+              <span className="text-transparent" style={{ WebkitTextStroke: "1.5px white", textStroke: "1.5px white" }}>India </span>Awaits,
+              <span className="block text-white mt-2 md:mt-4">Let's Drive</span>
             </h1>
           </div>
 
-          <p className="text-lg md:text-xl text-white mb-12 max-w-3xl leading-relaxed">
-            Let's explore one of the most diverse and beautiful countries in the world, namely India. Enjoy premium travel packages at competitive prices with authentic experiences and unforgettable memories.
+          <p className="text-base sm:text-lg md:text-xl text-white mb-8 md:mb-12 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl leading-relaxed">
+            Step into a world of breathtaking landscapes, ancient culture, and modern comfort. Our premium tours make every mile as unforgettable as the places you'll see.
           </p>
 
-          <div className="border-t border-white/20 pt-8 mb-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl">
+          <div className="border-t border-white/20 pt-6 md:pt-8 mb-8 md:mb-12 max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-3xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-4xl">
               <div>
-                <h3 className="text-white font-bold text-lg mb-2">Most Popular Activity</h3>
-                <p className="text-white/80 text-sm">Mountain Trekking in Himachal</p>
+                <h3 className="text-white font-bold text-base sm:text-lg mb-1 sm:mb-2">Top Choice Ride</h3>
+                <p className="text-white/80 text-sm sm:text-base">Premium Sedans & SUVs for every journey.</p>
               </div>
               <div>
-                <h3 className="text-white font-bold text-lg mb-2">Most Excited Place</h3>
-                <p className="text-white/80 text-sm">Rajasthan Heritage & Culture</p>
+                <h3 className="text-white font-bold text-base sm:text-lg mb-1 sm:mb-2">Most Loved Route</h3>
+                <p className="text-white/80 text-sm sm:text-base">Rajasthan heritage tours in chauffeur-driven comfort.</p>
               </div>
               <div>
-                <h3 className="text-white font-bold text-lg mb-2">Travel Style</h3>
-                <p className="text-white/80 text-sm">Luxury Comfort Tours</p>
+                <h3 className="text-white font-bold text-base sm:text-lg mb-1 sm:mb-2">Your Travel Style</h3>
+                <p className="text-white/80 text-sm sm:text-base">Luxury cars tailored to your group & needs.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Fleet Showcase Section - Consistent with theme */}
       <section className="py-20 bg-white">

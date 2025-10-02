@@ -40,7 +40,7 @@ export default function DelhiToUP() {
       multiDay: '₹7,000/day'
     },
     {
-      vehicle: 'Arvenia',
+      vehicle: 'Urbania',
       capacity: '5 Passengers',
       oneWay: '₹8,000',
       roundTrip: '₹15,000',

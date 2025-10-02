@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Delhi Premium Travel Agency | Luxury Fleet Services",
-  description: "Premium travel services from Delhi to Uttarakhand, Himachal, Rajasthan, UP, and Punjab with luxury fleet options including Sedan, SUV, MUV, Arvenia, and Tempo.",
+  description: "Premium travel services from Delhi to Uttarakhand, Himachal, Rajasthan, UP, and Punjab with luxury fleet options including Sedan, SUV, MUV, Urbania, and Tempo.",
   keywords: "travel agency delhi, delhi to uttarakhand, delhi to himachal, delhi to rajasthan, luxury fleet, car rental delhi"
 };
 
