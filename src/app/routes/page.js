@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-    title: "Our Operations & Routes | Delhi Travel Agency",
+    title: "Our Operations & Routes | Travel Agency",
     description:
         "Discover our car rental operations from Delhi, Chandigarh, and Dehradun to all over India. Specialized routes to Himachal, Uttarakhand, Rajasthan, Punjab, and Uttar Pradesh.",
     keywords:

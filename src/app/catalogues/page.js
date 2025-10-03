@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import Link from 'next/link';
 
 const pdfs = [
@@ -11,12 +12,23 @@ export default function CataloguesPage() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Hero */}
-      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 to-blue-800"></div>
-        <div className="absolute inset-0 opacity-30" style={{backgroundImage:'url(/globe.svg)', backgroundRepeat:'no-repeat', backgroundPosition:'right -100px top -100px'}}></div>
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 drop-shadow-lg">Catalogues</h1>
-          <p className="text-white/90 max-w-2xl mx-auto text-lg md:text-xl">Download our latest route pricing catalogues in PDF format.</p>
+     <section className="relative h-[40vh] flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-700 text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <Image 
+            src="/catalogue.jpg" 
+            alt="Catalogue" 
+            fill 
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="container mx-auto px-4 z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
+            Our <span className="text-yellow-400">Catalogues</span>
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-slide-up delay-100">
+            Download our latest route pricing catalogues in PDF format.
+          </p>
         </div>
       </section>
 

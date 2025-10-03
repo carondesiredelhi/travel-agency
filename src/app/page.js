@@ -29,13 +29,16 @@ export default function Home() {
         <div className="relative z-10 text-left text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-5xl">
           <div className="mb-6 md:mb-8">
             <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-bold  tracking-tight">
-              <span className="text-transparent" style={{ WebkitTextStroke: "1.5px white", textStroke: "1.5px white" }}>India </span>Awaits,
-              <span className="block text-white mt-2 md:mt-4">Let's Drive</span>
+              <span className="text-white mt-2 md:mt-4">Premium </span>
+              <span className="text-transparent" style={{ WebkitTextStroke: "1.5px white", textStroke: "1.5px white" }}>Cab</span>
+              <span className="block text-white mt-2 md:mt-4">Services, for India.</span>
             </h1>
           </div>
 
           <p className="text-base sm:text-lg md:text-xl text-white mb-8 md:mb-12 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl leading-relaxed">
-            Step into a world of breathtaking landscapes, ancient culture, and modern comfort. Our premium tours make every mile as unforgettable as the places you'll see.
+            Premium travel services from Delhi, Chandigarh and Dehradun to popular destinations across India including 
+            
+              <span className="text-transparent" style={{ WebkitTextStroke: "0.25px white", textStroke: "1.5px white" }}> Himachal, Uttarakhand, Punjab, UP, Rajasthan </span>with a luxury fleet of vehicles.
           </p>
 
           <div className="border-t border-white/20 pt-6 md:pt-8 mb-8 md:mb-12 max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-3xl">
