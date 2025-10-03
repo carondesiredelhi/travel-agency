@@ -2,50 +2,97 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Our Premium Fleet | Delhi Travel Agency',
-  description: 'Explore our premium fleet of vehicles including Sedan, SUV, MUV, Urbania, and Tempo Traveller for your comfortable journey from Delhi.',
+  title: 'Our Premium Fleet | Travel Agency',
+  description: 'Explore our premium fleet of vehicles including Sedan, SUV, MUV, Urbania, and Tempo Traveller for your comfortable journey from Delhi, Chandigarh and Dehradun.',
   keywords: 'travel fleet, sedan, suv, muv, urbania, tempo traveller, delhi travel, luxury vehicles'
 };
 
 export default function Fleet() {
-  // Fleet data
+
+  // const fleetData = [
+  //   {
+  //     name: 'Sedan',
+  //     image: '/sedan.png',
+  //     description: 'Comfortable and economical option for small groups or couples. Perfect for city travel and short distances.',
+  //     features: ['4 Passengers', 'Air Conditioning', '3 Luggage Capacity', 'Fuel Efficient', 'Ideal for City Travel'],
+  //     idealFor: 'Couples, Small Families, Business Travelers'
+  //   },
+  //   {
+  //     name: 'SUV',
+  //     image: '/suv.png',
+  //     description: 'Spacious and powerful vehicles perfect for long journeys and rough terrains. Ideal for family trips to hill stations.',
+  //     features: ['7 Passengers', 'Air Conditioning', '5 Luggage Capacity', 'All-Terrain Capability', 'Comfortable Seating'],
+  //     idealFor: 'Families, Groups, Hill Station Trips'
+  //   },
+  //   {
+  //     name: 'MUV',
+  //     image: '/muv.png',
+  //     description: 'Multi-Utility Vehicles offering extra space and comfort for larger groups while maintaining good fuel efficiency.',
+  //     features: ['8 Passengers', 'Air Conditioning', '6 Luggage Capacity', 'Spacious Interiors', 'Fuel Efficient'],
+  //     idealFor: 'Large Families, Extended Groups, Long Journeys'
+  //   },
+  //   {
+  //     name: 'Urbania',
+  //     image: '/urbania.png',
+  //     description: 'Premium luxury vehicles with enhanced comfort features for those who seek a touch of elegance in their journey.',
+  //     features: ['5 Passengers', 'Premium Air Conditioning', '4 Luggage Capacity', 'Leather Seating', 'Advanced Entertainment System'],
+  //     idealFor: 'Luxury Travelers, Corporate Executives, Special Occasions'
+  //   },
+  //   {
+  //     name: 'Tempo Traveller',
+  //     image: '/tempo.png',
+  //     description: 'Spacious mini-buses perfect for large groups traveling together. Ideal for corporate outings or large family trips.',
+  //     features: ['12-14 Passengers', 'Air Conditioning', '10+ Luggage Capacity', 'Comfortable Push-back Seats', 'Ample Leg Room'],
+  //     idealFor: 'Large Groups, Corporate Outings, Tour Groups'
+  //   }
+  // ];
+
+
   const fleetData = [
-    {
-      name: 'Sedan',
-      image: '/sedan.png',
-      description: 'Comfortable and economical option for small groups or couples. Perfect for city travel and short distances.',
-      features: ['4 Passengers', 'Air Conditioning', '3 Luggage Capacity', 'Fuel Efficient', 'Ideal for City Travel'],
-      idealFor: 'Couples, Small Families, Business Travelers'
-    },
-    {
-      name: 'SUV',
-      image: '/suv.png',
-      description: 'Spacious and powerful vehicles perfect for long journeys and rough terrains. Ideal for family trips to hill stations.',
-      features: ['7 Passengers', 'Air Conditioning', '5 Luggage Capacity', 'All-Terrain Capability', 'Comfortable Seating'],
-      idealFor: 'Families, Groups, Hill Station Trips'
-    },
-    {
-      name: 'MUV',
-      image: '/muv.png',
-      description: 'Multi-Utility Vehicles offering extra space and comfort for larger groups while maintaining good fuel efficiency.',
-      features: ['8 Passengers', 'Air Conditioning', '6 Luggage Capacity', 'Spacious Interiors', 'Fuel Efficient'],
-      idealFor: 'Large Families, Extended Groups, Long Journeys'
-    },
-    {
-      name: 'Urbania',
-      image: '/urbania.png',
-      description: 'Premium luxury vehicles with enhanced comfort features for those who seek a touch of elegance in their journey.',
-      features: ['5 Passengers', 'Premium Air Conditioning', '4 Luggage Capacity', 'Leather Seating', 'Advanced Entertainment System'],
-      idealFor: 'Luxury Travelers, Corporate Executives, Special Occasions'
-    },
-    {
-      name: 'Tempo Traveller',
-      image: '/tempo.png',
-      description: 'Spacious mini-buses perfect for large groups traveling together. Ideal for corporate outings or large family trips.',
-      features: ['12-14 Passengers', 'Air Conditioning', '10+ Luggage Capacity', 'Comfortable Push-back Seats', 'Ample Leg Room'],
-      idealFor: 'Large Groups, Corporate Outings, Tour Groups'
-    }
-  ];
+  {
+    name: 'Swift Dzire',
+    image: '/sedan.png',
+    description: 'Compact sedan known for reliability, comfort, and excellent fuel efficiency. Ideal for daily commutes and city rides.',
+    features: ['4 Passengers', 'Air Conditioning', '3 Luggage Capacity', 'Fuel Efficient', 'Smooth City Drive'],
+    idealFor: 'Couples, Small Families, Business Travelers, Airport Transfers'
+  },
+  {
+    name: 'Innova Crysta',
+    image: '/suv.png',
+    description: 'Premium MPV with plush interiors, powerful performance, and ultimate comfort for long-distance travel.',
+    features: ['7 Passengers', 'Air Conditioning', '5-6 Luggage Capacity', 'Spacious Interiors', 'Smooth Ride'],
+    idealFor: 'Families, Corporate Travel, Outstation Journeys, Hill Station Trips'
+  },
+  {
+    name: 'Tempo Traveller',
+    image: '/tempo.png',
+    description: 'The go-to choice for big groups, offering spacious interiors and comfortable seating for long trips together.',
+    features: ['12-17 Passengers', 'Air Conditioning', '10+ Luggage Capacity', 'Push-back Seats', 'Ample Leg Room'],
+    idealFor: 'Large Families, Corporate Outings, Group Tours, Pilgrimage Trips'
+  },
+  {
+    name: 'Urbania',
+    image: '/urbania.png',
+    description: 'Luxury van with advanced features, offering business-class comfort and style for travel in larger groups.',
+    features: ['8-10 Passengers', 'Premium Air Conditioning', '6-7 Luggage Capacity', 'Luxury Interiors', 'Entertainment System'],
+    idealFor: 'Corporate Executives, Luxury Travelers, Special Events, VIP Transfers'
+  },
+  {
+    name: 'Kia',
+    image: '/kia.jpg',
+    description: 'A sporty luxury sedan delivering high performance, sleek design, and a premium driving experience.',
+    features: ['4 Passengers', 'Premium Air Conditioning', '3 Luggage Capacity', 'Leather Interiors', 'High Performance Engine'],
+    idealFor: 'Luxury Travelers, Couples, Business Executives, Special Occasions'
+  },
+  {
+    name: 'Ertiga',
+    image: '/ertiga.jpg',
+    description: 'A practical and spacious MPV offering comfort and efficiency for medium-sized families and groups.',
+    features: ['6-7 Passengers', 'Air Conditioning', '4-5 Luggage Capacity', 'Flexible Seating', 'Fuel Efficient'],
+    idealFor: 'Families, Small Groups, Outstation Trips'
+  }
+];
+
 
   return (
     <div className="min-h-screen">

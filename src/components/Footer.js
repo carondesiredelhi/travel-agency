@@ -11,15 +11,15 @@ export default function Footer() {
             <div className="flex items-center space-x-2 mb-4">
               <Image 
                 src="/logo.png" 
-                alt="Delhi Premium Travel" 
+                alt="Car on Desire" 
                 width={40} 
                 height={40} 
                 className="w-10 h-10 invert"
               />
-              <span className="text-xl font-bold">Delhi Premium Travel</span>
+              <span className="text-xl font-bold">Car on Desire</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Premium travel services from Delhi to popular destinations across North India with a luxury fleet of vehicles.
+              Premium travel services from Delhi, Chandigarh and Dehradun to popular destinations across India with a luxury fleet of vehicles.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
