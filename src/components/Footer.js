@@ -149,8 +149,30 @@ export default function Footer() {
         </div>
         
         {/* Copyright */}
-        <div className="pt-8 mt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} CarOnDesire. All rights reserved.</p>
+        <div className="pt-8 mt-8 border-t border-gray-800">
+          <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+            {/* Design and Developed by Digicraft */}
+            <div className="flex items-center space-x-2 mb-4 md:mb-0">
+              <span className="text-gray-500">Design & Developed by</span>
+              <a 
+                href="https://digicraft.one" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:text-white transition-colors duration-200"
+              >
+                <Image 
+                  src="https://data.digicraft.one/Logo/Main.png" 
+                  alt="Digicraft" 
+                  width={24} 
+                  height={24} 
+                  className="w-6 h-6"
+                />
+                <span className="font-semibold">Digicraft</span>
+              </a>
+            </div>
+            
+            <p>&copy; {new Date().getFullYear()} CarOnDesire. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>
