@@ -105,7 +105,7 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:border-indigo-500 border-2 border-transparent">
+            <div className="bg-white rounded-xl shadow-sm transition-all duration-300 hover:shadow-xl hover:border-indigo-500 border-2 border-transparent">
               <div className="relative h-44 sm:h-48 mb-4 rounded-lg overflow-hidden">
                 <Image src="/suv.png" alt="SUV" fill className="object-cover" />
               </div>
@@ -115,6 +115,48 @@ export default function Home() {
                 <ul className="text-gray-700 space-y-2">
                   <li className="flex items-center"><IconCheck /> Up to 7 passengers</li>
                   <li className="flex items-center"><IconCheck /> Ample Luggage Space</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:border-indigo-500 border-2 border-transparent">
+              <div className="relative h-44 sm:h-48 mb-4 rounded-lg overflow-hidden">
+                <Image src="/ertiga.png" alt="Ertiga" fill className="object-cover" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2 text-gray-800">Ertiga</h3>
+                <p className="text-gray-600 mb-4">A practical and spacious MPV offering comfort and efficiency for medium-sized families.</p>
+                <ul className="text-gray-700 space-y-2">
+                  <li className="flex items-center"><IconCheck /> Up to 7 passengers</li>
+                  <li className="flex items-center"><IconCheck /> Flexible Seating</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:border-indigo-500 border-2 border-transparent">
+              <div className="relative h-44 sm:h-48 mb-4 rounded-lg overflow-hidden">
+                <Image src="/kia.png" alt="Kia" fill className="object-cover" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2 text-gray-800">Kia</h3>
+                <p className="text-gray-600 mb-4">A sporty luxury sedan delivering high performance and premium driving experience.</p>
+                <ul className="text-gray-700 space-y-2">
+                  <li className="flex items-center"><IconCheck /> Up to 4 passengers</li>
+                  <li className="flex items-center"><IconCheck /> Premium Interiors</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:border-indigo-500 border-2 border-transparent">
+              <div className="relative h-44 sm:h-48 mb-4 rounded-lg overflow-hidden">
+                <Image src="/urbania.png" alt="Urbania" fill className="object-cover" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2 text-gray-800">Urbania</h3>
+                <p className="text-gray-600 mb-4">Luxury van with advanced features, offering business-class comfort and style for travel in larger groups.</p>
+                <ul className="text-gray-700 space-y-2">
+                  <li className="flex items-center"><IconCheck /> Up to 10 passengers</li>
+                  <li className="flex items-center"><IconCheck /> Premium Interiors</li>
                 </ul>
               </div>
             </div>
@@ -149,6 +191,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/* States Coverage Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">We Operate in <span className="text-indigo-600">All States</span></h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Our services extend across all 28 states and 8 union territories of India. 
+              From the mountains of the north to the beaches of the south, we're there for your journey.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {[
+              'Himachal Pradesh', 'Uttarakhand', 'Rajasthan', 'Punjab', 'Uttar Pradesh', 'Haryana',
+              'Maharashtra', 'Karnataka', 'Tamil Nadu', 'Kerala', 'Gujarat', 'Madhya Pradesh',
+              'West Bengal', 'Bihar', 'Odisha', 'Assam', 'Jharkhand', 'Chhattisgarh',
+              'Andhra Pradesh', 'Telangana', 'Goa', 'Delhi', 'Chandigarh', 'J&K'
+            ].map((state, index) => (
+              <div key={index} className="bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 rounded-lg p-3 text-center transition-all duration-300 hover:scale-105 transform animate-slide-up" style={{ animationDelay: `${index * 50}ms` }}>
+                <h3 className="text-sm font-semibold text-gray-800">{state}</h3>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-8">
+            <p className="text-gray-500 text-sm">+ 14 more states and union territories</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Major Cities Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Other Places Where We <span className="text-indigo-600">Operate</span></h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Explore India's most popular destinations with our reliable car rental services. 
+              From metropolitan cities to heritage towns, we connect you to every corner of the country.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {[
+              'Mumbai', 'Bangalore', 'Chennai', 'Kolkata', 'Hyderabad', 'Pune', 'Ahmedabad', 'Jaipur',
+              'Surat', 'Lucknow', 'Kanpur', 'Nagpur', 'Indore', 'Thane', 'Bhopal', 'Visakhapatnam',
+              'Ludhiana', 'Agra', 'Nashik', 'Faridabad', 'Meerut', 'Rajkot', 'Varanasi', 'Srinagar'
+            ].map((city, index) => (
+              <div key={index} className="bg-white hover:bg-indigo-50 border border-gray-200 rounded-lg p-3 text-center transition-all duration-300 hover:scale-105 transform hover:border-indigo-300 animate-slide-up" style={{ animationDelay: `${index * 30}ms` }}>
+                <h3 className="text-sm font-semibold text-gray-800">{city}</h3>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-8">
+            <p className="text-gray-500 text-sm">+ 50+ more cities across India</p>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works Section - Consistent styling */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center max-w-7xl">
@@ -157,17 +258,23 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-5xl mx-auto">
             <div className="flex flex-col items-center group">
-              <div className="bg-indigo-100 text-indigo-600 w-20 h-20 rounded-full flex items-center justify-center mb-6 text-3xl font-bold group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">1</div>
+              <div className="w-full rounded-full flex items-center justify-center mb-6 transition-all duration-300">
+                <Image src="/choose-ride.png" alt="Choose Your Ride" className="object-cover h-full w-full" height={200} width={200}/>
+              </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-800">Choose Your Ride</h3>
               <p className="text-gray-600 leading-relaxed">Select the perfect vehicle from our premium fleet to match your travel needs and group size.</p>
             </div>
             <div className="flex flex-col items-center group">
-              <div className="bg-indigo-100 text-indigo-600 w-20 h-20 rounded-full flex items-center justify-center mb-6 text-3xl font-bold group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">2</div>
+              <div className="w-full rounded-full flex items-center justify-center mb-6 transition-all duration-300">
+                <Image src="/share-plan.png" alt="Share Your Plan" className="object-cover h-full w-full" height={200} width={200}/>
+              </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-800">Share Your Plan</h3>
               <p className="text-gray-600 leading-relaxed">Tell us your destination and schedule. We'll handle all the planning and logistics for you.</p>
             </div>
             <div className="flex flex-col items-center group">
-              <div className="bg-indigo-100 text-indigo-600 w-20 h-20 rounded-full flex items-center justify-center mb-6 text-3xl font-bold group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">3</div>
+              <div className="w-full rounded-full flex items-center justify-center mb-6 transition-all duration-300">
+                <Image src="/enjoy-journey.png" alt="Enjoy the Journey" className="object-cover h-full w-full" height={200} width={200}/>
+              </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-800">Enjoy the Journey</h3>
               <p className="text-gray-600 leading-relaxed">Sit back, relax, and enjoy a seamless travel experience with our expert chauffeurs.</p>
             </div>
@@ -203,7 +310,7 @@ export default function Home() {
               <div className="relative w-full max-w-md mx-auto">
                 <div className="relative z-10">
                   <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden mx-auto relative border-4 border-white shadow-lg">
-                    <Image src="/about-story.png" alt="Happy Traveler" fill className="object-cover" />
+                    <Image src="/client.png" alt="Happy Traveler" fill className="object-cover" />
                   </div>
                 </div>
                 {/* FIXED: Updated decorative elements to match indigo theme */}

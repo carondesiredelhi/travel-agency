@@ -1,13 +1,67 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 
-export const metadata = {
-  title: 'About Us | Delhi Travel Agency',
-  description: 'Learn about our premium travel agency offering quality transportation services from Delhi to various destinations across North India.',
-  keywords: 'about delhi travel agency, delhi car rental history, travel agency experience, professional drivers'
-};
+// export const metadata = {
+//   title: 'About Us | Delhi Travel Agency',
+//   description: 'Learn about our premium travel agency offering quality transportation services from Delhi to various destinations across North India.',
+//   keywords: 'about delhi travel agency, delhi car rental history, travel agency experience, professional drivers'
+// };
+
+// Custom hook for count animation
+function useCountAnimation(end, duration = 2000, start = 0) {
+  const [count, setCount] = useState(start);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime;
+    const animate = (currentTime) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentCount = Math.floor(easeOutQuart * (end - start) + start);
+      
+      setCount(currentCount);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [isVisible, end, duration, start]);
+
+  return [count, ref];
+}
 
 export default function About() {
+  const [yearsCount, yearsRef] = useCountAnimation(15);
+  const [vehiclesCount, vehiclesRef] = useCountAnimation(50);
+  const [customersCount, customersRef] = useCountAnimation(10000);
+  const [destinationsCount, destinationsRef] = useCountAnimation(500);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -185,23 +239,23 @@ export default function About() {
           <h2 className="text-3xl font-bold text-center mb-12 animate-fade-in">Our <span className="text-yellow-600">Achievements</span></h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <div className="p-6 animate-slide-up delay-100">
-              <div className="text-4xl font-bold text-yellow-600 mb-2">15+</div>
+            <div className="p-6 animate-slide-up delay-100" ref={yearsRef}>
+              <div className="text-4xl font-bold text-yellow-600 mb-2">{yearsCount}+</div>
               <p className="text-gray-700 font-medium">Years of Experience</p>
             </div>
             
-            <div className="p-6 animate-slide-up delay-200">
-              <div className="text-4xl font-bold text-yellow-600 mb-2">50+</div>
+            <div className="p-6 animate-slide-up delay-200" ref={vehiclesRef}>
+              <div className="text-4xl font-bold text-yellow-600 mb-2">{vehiclesCount}+</div>
               <p className="text-gray-700 font-medium">Premium Vehicles</p>
             </div>
             
-            <div className="p-6 animate-slide-up delay-300">
-              <div className="text-4xl font-bold text-yellow-600 mb-2">10,000+</div>
+            <div className="p-6 animate-slide-up delay-300" ref={customersRef}>
+              <div className="text-4xl font-bold text-yellow-600 mb-2">{customersCount.toLocaleString()}+</div>
               <p className="text-gray-700 font-medium">Happy Customers</p>
             </div>
             
-            <div className="p-6 animate-slide-up delay-400">
-              <div className="text-4xl font-bold text-yellow-600 mb-2">500+</div>
+            <div className="p-6 animate-slide-up delay-400" ref={destinationsRef}>
+              <div className="text-4xl font-bold text-yellow-600 mb-2">{destinationsCount}+</div>
               <p className="text-gray-700 font-medium">Destinations Covered</p>
             </div>
           </div>

@@ -79,14 +79,14 @@ export default function Fleet() {
   },
   {
     name: 'Kia',
-    image: '/kia.jpg',
+    image: '/kia.png',
     description: 'A sporty luxury sedan delivering high performance, sleek design, and a premium driving experience.',
     features: ['4 Passengers', 'Premium Air Conditioning', '3 Luggage Capacity', 'Leather Interiors', 'High Performance Engine'],
     idealFor: 'Luxury Travelers, Couples, Business Executives, Special Occasions'
   },
   {
     name: 'Ertiga',
-    image: '/ertiga.jpg',
+    image: '/ertiga.png',
     description: 'A practical and spacious MPV offering comfort and efficiency for medium-sized families and groups.',
     features: ['6-7 Passengers', 'Air Conditioning', '4-5 Luggage Capacity', 'Flexible Seating', 'Fuel Efficient'],
     idealFor: 'Families, Small Groups, Outstation Trips'

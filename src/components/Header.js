@@ -92,11 +92,11 @@ export default function Header() {
                   </svg>
                 </button>
                 <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                  <Link href="/routes/delhi-to-uttarakhand" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-200">To Uttarakhand</Link>
-                  <Link href="/routes/delhi-to-himachal" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-200">To Himachal</Link>
-                  <Link href="/routes/delhi-to-rajasthan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-200">To Rajasthan</Link>
-                  <Link href="/routes/delhi-to-up" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-200">To UP</Link>
-                  <Link href="/routes/delhi-to-punjab" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-200">To Punjab</Link>
+                  <Link href="/routes/to-uttarakhand" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-200">To Uttarakhand</Link>
+                  <Link href="/routes/to-himachal" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-200">To Himachal</Link>
+                  <Link href="/routes/to-rajasthan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-200">To Rajasthan</Link>
+                  <Link href="/routes/to-up" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-200">To UP</Link>
+                  <Link href="/routes/to-punjab" className="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-200">To Punjab</Link>
                 </div>
               </div>
             </div>
@@ -130,19 +130,19 @@ export default function Header() {
               <Link onClick={() => setMobileMenuOpen(false)} href="/routes" className="text-gray-700 hover:text-yellow-600 font-medium transition-colors duration-200">Routes</Link>
 
                 <div className="pl-4 space-y-2 flex flex-col">
-                  <Link onClick={() => setMobileMenuOpen(false)} href="/routes/delhi-to-uttarakhand" className="text-gray-600 hover:text-yellow-600 transition-colors duration-200">
+                  <Link onClick={() => setMobileMenuOpen(false)} href="/routes/to-uttarakhand" className="text-gray-600 hover:text-yellow-600 transition-colors duration-200">
                     To Uttarakhand
                   </Link>
-                  <Link onClick={() => setMobileMenuOpen(false)} href="/routes/delhi-to-himachal" className="text-gray-600 hover:text-yellow-600 transition-colors duration-200">
+                  <Link onClick={() => setMobileMenuOpen(false)} href="/routes/to-himachal" className="text-gray-600 hover:text-yellow-600 transition-colors duration-200">
                     To Himachal
                   </Link>
-                  <Link onClick={() => setMobileMenuOpen(false)} href="/routes/delhi-to-rajasthan" className="text-gray-600 hover:text-yellow-600 transition-colors duration-200">
+                  <Link onClick={() => setMobileMenuOpen(false)} href="/routes/to-rajasthan" className="text-gray-600 hover:text-yellow-600 transition-colors duration-200">
                     To Rajasthan
                   </Link>
-                  <Link onClick={() => setMobileMenuOpen(false)} href="/routes/delhi-to-up" className="text-gray-600 hover:text-yellow-600 transition-colors duration-200">
+                  <Link onClick={() => setMobileMenuOpen(false)} href="/routes/to-up" className="text-gray-600 hover:text-yellow-600 transition-colors duration-200">
                     To UP
                   </Link>
-                  <Link onClick={() => setMobileMenuOpen(false)} href="/routes/delhi-to-punjab" className="text-gray-600 hover:text-yellow-600 transition-colors duration-200">
+                  <Link onClick={() => setMobileMenuOpen(false)} href="/routes/to-punjab" className="text-gray-600 hover:text-yellow-600 transition-colors duration-200">
                     To Punjab
                   </Link>
                 </div>

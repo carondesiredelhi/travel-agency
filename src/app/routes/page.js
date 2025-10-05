@@ -227,6 +227,58 @@ export default function RoutesPage() {
                 </div>
             </section>
 
+            {/* All States Section */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold text-center mb-12 animate-fade-in">
+                        We Operate in <span className="text-yellow-600">All States</span>
+                    </h2>
+                    <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                        Our services extend across all 28 states and 8 union territories of India. 
+                        From the mountains of the north to the beaches of the south, we're there for your journey.
+                    </p>
+                    
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+                        {[
+                            'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana',
+                            'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya',
+                            'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana',
+                            'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal', 'Delhi', 'Jammu & Kashmir', 'Ladakh', 'Chandigarh',
+                            'Puducherry', 'Andaman & Nicobar', 'Daman & Diu', 'Dadra & Nagar Haveli', 'Lakshadweep'
+                        ].map((state, index) => (
+                            <div key={index} className="bg-yellow-50 hover:bg-yellow-100 border border-yellow-200 rounded-lg p-3 text-center transition-all duration-300 hover:scale-105 transform animate-slide-up" style={{ animationDelay: `${index * 50}ms` }}>
+                                <h3 className="text-xs font-semibold text-gray-800 leading-tight">{state}</h3>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Top Cities Section */}
+            <section className="py-16 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold text-center mb-12 animate-fade-in">
+                        Other Places Where We <span className="text-yellow-600">Operate</span>
+                    </h2>
+                    <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                        Explore India's most popular destinations with our reliable car rental services. 
+                        From metropolitan cities to heritage towns, we connect you to every corner of the country.
+                    </p>
+                    
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                        {[
+                            'Mumbai', 'Bangalore', 'Chennai', 'Kolkata', 'Hyderabad', 'Pune', 'Ahmedabad', 'Jaipur',
+                            'Surat', 'Lucknow', 'Kanpur', 'Nagpur', 'Indore', 'Thane', 'Bhopal', 'Visakhapatnam',
+                            'Pimpri-Chinchwad', 'Patna', 'Vadodara', 'Ghaziabad'
+                        ].map((city, index) => (
+                            <div key={index} className="bg-white hover:bg-yellow-50 border border-gray-200 rounded-lg p-4 text-center transition-all duration-300 hover:scale-105 transform hover:border-yellow-300 animate-slide-up" style={{ animationDelay: `${index * 30}ms` }}>
+                                <h3 className="text-sm font-semibold text-gray-800">{city}</h3>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Call to Action */}
             <section className="py-16 bg-yellow-50">
                 <div className="container mx-auto px-4 text-center">
