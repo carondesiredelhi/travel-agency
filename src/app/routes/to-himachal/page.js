@@ -112,7 +112,7 @@ export default function HimachalTaxiPage() {
             <section className="relative h-[60vh] flex items-center justify-center bg-gradient-to-r from-green-900 to-emerald-800 text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-80">
                     <Image
-                        src="/himachal-hero.avif"
+                        src="/himachal.avif"
                         alt="Himachal Mountains"
                         fill
                         className="object-cover"

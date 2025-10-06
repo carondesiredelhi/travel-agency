@@ -84,7 +84,7 @@ export default function RajasthanTaxiPage() {
             <section className="relative h-[60vh] flex items-center justify-center bg-gradient-to-r from-amber-900 to-orange-800 text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-80">
                     <Image
-                        src="/rajasthan-hero.png"
+                        src="/rajasthan.png"
                         alt="Rajasthan Forts"
                         fill
                         className="object-cover"
