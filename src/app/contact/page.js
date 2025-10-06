@@ -63,8 +63,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Phone Number</h3>
-                    <p className="text-gray-600">+91 98765 43210 (Bookings)</p>
-                    <p className="text-gray-600">+91 98765 43211 (Customer Support)</p>
+                    <p className="text-gray-600">+91 93103 89959 <br/> +91 70489 96401</p>
                   </div>
                 </div>
                 
@@ -76,8 +75,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Email Address</h3>
-                    <p className="text-gray-600">bookings@delhitravelagency.com</p>
-                    <p className="text-gray-600">support@delhitravelagency.com</p>
+                    <p className="text-gray-600">rent@carondesire.com</p>
                   </div>
                 </div>
                 

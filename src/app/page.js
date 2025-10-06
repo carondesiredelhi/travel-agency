@@ -79,7 +79,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <div className="bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:border-indigo-500 border-2 border-transparent">
               <div className="relative h-44 sm:h-48 mb-4 rounded-lg overflow-hidden">
-                <Image src="/sedan.png" alt="Sedan" fill className="object-cover" />
+                <Image src="/sedan.avif" alt="Sedan" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Sedan</h3>
@@ -93,7 +93,7 @@ export default function Home() {
             
             <div className="bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:border-indigo-500 border-2 border-transparent">
               <div className="relative h-44 sm:h-48 mb-4 rounded-lg overflow-hidden">
-                <Image src="/tempo.png" alt="Tempo Traveller" fill className="object-cover" />
+                <Image src="/tempo.webp" alt="Tempo Traveller" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Tempo Traveller</h3>
@@ -107,7 +107,7 @@ export default function Home() {
             
             <div className="bg-white rounded-xl shadow-sm transition-all duration-300 hover:shadow-xl hover:border-indigo-500 border-2 border-transparent">
               <div className="relative h-44 sm:h-48 mb-4 rounded-lg overflow-hidden">
-                <Image src="/suv.png" alt="SUV" fill className="object-cover" />
+                <Image src="/suv.avif" alt="SUV" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">SUV</h3>
@@ -121,7 +121,7 @@ export default function Home() {
 
             <div className="bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:border-indigo-500 border-2 border-transparent">
               <div className="relative h-44 sm:h-48 mb-4 rounded-lg overflow-hidden">
-                <Image src="/ertiga.png" alt="Ertiga" fill className="object-cover" />
+                <Image src="/ertiga.avif" alt="Ertiga" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Ertiga</h3>
@@ -149,7 +149,7 @@ export default function Home() {
 
             <div className="bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:border-indigo-500 border-2 border-transparent">
               <div className="relative h-44 sm:h-48 mb-4 rounded-lg overflow-hidden">
-                <Image src="/urbania.png" alt="Urbania" fill className="object-cover" />
+                <Image src="/urbania.jpg" alt="Urbania" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Urbania</h3>

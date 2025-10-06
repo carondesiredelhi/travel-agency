@@ -157,7 +157,7 @@ export default function UttarakhandTaxiPage() {
             <section className="relative h-[60vh] flex items-center justify-center bg-gradient-to-r from-blue-900 to-cyan-800 text-white overflow-hidden">
                 <div className="absolute inset-0 opacity-80">
                     <Image
-                        src="/uttarakhand-hero.webp"
+                        src="/uttarakhand.webp"
                         alt="Uttarakhand Mountains"
                         fill
                         className="object-cover"
