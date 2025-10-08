@@ -131,6 +131,21 @@ export default function FleetPage() {
             ],
             idealFor: "Families, Small Groups, Outstation Trips",
         },
+        {
+            name: "Fortuner",
+            images: ["/fortuner.png", "/fortuner_int.png"],
+            description:
+                "A luxury SUV with advanced features, offering business-class comfort and style for travel in larger groups.",
+            features: [
+                "6-7 Passengers",
+                "Air Conditioning",
+                "4-5 Luggage Capacity",
+                "Luxury Interiors",
+                "Entertainment System",
+            ],
+            idealFor:
+                "Corporate Executives, Luxury Travelers, Special Events, VIP Transfers",
+        },
     ];
 
     return (
