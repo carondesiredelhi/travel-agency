@@ -92,7 +92,7 @@ export default function About() {
             <div className="lg:w-1/2 animate-slide-up delay-100">
               <h2 className="text-3xl font-bold mb-6">Our <span className="text-yellow-600">Story</span></h2>
               <p className="text-gray-700 mb-4">
-                Founded in 2005, Delhi Travel Agency began with a small fleet of just 3 vehicles and a passion for showcasing the beauty of North India to travelers. What started as a modest family business has grown into one of the region's most trusted travel service providers.
+                Founded in 2005, Tourist transport Agency began with a small fleet of just 3 vehicles and a passion for showcasing the beauty of North India to travelers. What started as a modest family business has grown into one of the region's most trusted travel service providers.
               </p>
               <p className="text-gray-700 mb-4">
                 Our journey has been defined by our commitment to exceptional service, safety, and creating memorable experiences for our clients. From business travelers to family vacationers, we've helped thousands of people explore the diverse landscapes and rich cultural heritage of North India.
