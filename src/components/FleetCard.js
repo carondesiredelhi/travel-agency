@@ -25,7 +25,7 @@ export default function FleetCard({ vehicle, reverse }) {
                     fill
                     className="object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
                 />
-                <button
+                {/* <button
                     onClick={handlePrev}
                     className="absolute left-3 top-1/2 text-2xl -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full hover:bg-black/70 transition"
                 >
@@ -36,7 +36,7 @@ export default function FleetCard({ vehicle, reverse }) {
                     className="absolute right-3 top-1/2 text-2xl -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full hover:bg-black/70 transition"
                 >
                     →
-                </button>
+                </button> */}
             </div>
             <div className="flex gap-3 justify-center">
                 {vehicle.images.map((img, idx) => (
