@@ -27,6 +27,37 @@ export default function FleetPage() {
             idealFor:
                 "Couples, Small Families, Business Travelers, Airport Transfers",
         },
+        
+        {
+            name: "Kia",
+            images: ["/kia.png"],
+            description:
+                "A sporty luxury sedan delivering high performance, sleek design, and a premium driving experience.",
+            features: [
+                "4 Passengers",
+                "Premium Air Conditioning",
+                "3 Luggage Capacity",
+                "Leather Interiors",
+                "High Performance Engine",
+            ],
+            idealFor:
+                "Luxury Travelers, Couples, Business Executives, Special Occasions",
+        },
+        
+        {
+            name: "Ertiga",
+            images: ["/ertiga.avif", "/ertiga_int.png", "/ertiga_space.webp"],
+            description:
+                "A practical and spacious MPV offering comfort and efficiency for medium-sized families and groups.",
+            features: [
+                "6-7 Passengers",
+                "Air Conditioning",
+                "4-5 Luggage Capacity",
+                "Flexible Seating",
+                "Fuel Efficient",
+            ],
+            idealFor: "Families, Small Groups, Outstation Trips",
+        },
         {
             name: "Innova Crysta",
             images: ["/suv.avif", "/suv_int.png"],
@@ -41,6 +72,22 @@ export default function FleetPage() {
             ],
             idealFor:
                 "Families, Corporate Travel, Outstation Journeys, Hill Station Trips",
+        },
+        
+        {
+            name: "Fortuner",
+            images: ["/fortuner.png", "/fortuner_int.png"],
+            description:
+                "A luxury SUV with advanced features, offering business-class comfort and style for travel in larger groups.",
+            features: [
+                "6-7 Passengers",
+                "Air Conditioning",
+                "4-5 Luggage Capacity",
+                "Luxury Interiors",
+                "Entertainment System",
+            ],
+            idealFor:
+                "Corporate Executives, Luxury Travelers, Special Events, VIP Transfers",
         },
         {
             name: "Tempo Traveller 20 seater",
@@ -96,50 +143,6 @@ export default function FleetPage() {
                 "16 Passengers",
                 "Premium Air Conditioning",
                 "6-7 Luggage Capacity",
-                "Luxury Interiors",
-                "Entertainment System",
-            ],
-            idealFor:
-                "Corporate Executives, Luxury Travelers, Special Events, VIP Transfers",
-        },
-        {
-            name: "Kia",
-            images: ["/kia.png"],
-            description:
-                "A sporty luxury sedan delivering high performance, sleek design, and a premium driving experience.",
-            features: [
-                "4 Passengers",
-                "Premium Air Conditioning",
-                "3 Luggage Capacity",
-                "Leather Interiors",
-                "High Performance Engine",
-            ],
-            idealFor:
-                "Luxury Travelers, Couples, Business Executives, Special Occasions",
-        },
-        {
-            name: "Ertiga",
-            images: ["/ertiga.avif", "/ertiga_int.png", "/ertiga_space.webp"],
-            description:
-                "A practical and spacious MPV offering comfort and efficiency for medium-sized families and groups.",
-            features: [
-                "6-7 Passengers",
-                "Air Conditioning",
-                "4-5 Luggage Capacity",
-                "Flexible Seating",
-                "Fuel Efficient",
-            ],
-            idealFor: "Families, Small Groups, Outstation Trips",
-        },
-        {
-            name: "Fortuner",
-            images: ["/fortuner.png", "/fortuner_int.png"],
-            description:
-                "A luxury SUV with advanced features, offering business-class comfort and style for travel in larger groups.",
-            features: [
-                "6-7 Passengers",
-                "Air Conditioning",
-                "4-5 Luggage Capacity",
                 "Luxury Interiors",
                 "Entertainment System",
             ],
