@@ -61,9 +61,15 @@ export default function FleetCard({ vehicle, reverse }) {
         </div>
     );
 
+    const nameSection = (
+        <div className="md:hidden">
+            <h3 className="text-3xl font-bold mb-4">{vehicle.name}</h3>
+        </div>
+    );
+
     const infoSection = (
         <div>
-            <h3 className="text-3xl font-bold mb-4">{vehicle.name}</h3>
+            <h3 className="hidden md:block text-3xl font-bold mb-4">{vehicle.name}</h3>
             <p className="text-gray-600 mb-6">{vehicle.description}</p>
 
             <h4 className="font-semibold text-gray-800 mb-2">Features:</h4>
@@ -86,22 +92,32 @@ export default function FleetCard({ vehicle, reverse }) {
     );
 
     return (
-        <div
-            className={`grid md:grid-cols-2 gap-12 items-center py-6 ${
-                reverse ? "md:flex-row-reverse" : ""
-            }`}
-        >
-            {reverse ? (
-                <>
-                    {infoSection}
-                    {imageSection}
-                </>
-            ) : (
-                <>
-                    {imageSection}
-                    {infoSection}
-                </>
-            )}
+        <div className="py-6">
+            {/* Mobile Layout */}
+            <div className="md:hidden space-y-6">
+                {nameSection}
+                {imageSection}
+                {infoSection}
+            </div>
+            
+            {/* Desktop Layout */}
+            <div
+                className={`hidden md:grid md:grid-cols-2 gap-12 items-center ${
+                    reverse ? "md:flex-row-reverse" : ""
+                }`}
+            >
+                {reverse ? (
+                    <>
+                        {infoSection}
+                        {imageSection}
+                    </>
+                ) : (
+                    <>
+                        {imageSection}
+                        {infoSection}
+                    </>
+                )}
+            </div>
         </div>
     );
 }

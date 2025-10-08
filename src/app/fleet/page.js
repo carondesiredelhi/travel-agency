@@ -14,14 +14,14 @@ export default function FleetPage() {
     const fleetData = [
         {
             name: "Swift Dzire",
-            images: ["/sedan.avif", "/sedan_int.avif", "/sedan_space.avif"],
+            images: ["/sedan.png", "/sedan_int.png", "/sedan_space.avif"],
             description:
-                "Compact sedan known for reliability, comfort, and excellent fuel efficiency. Ideal for daily commutes and city rides.",
+                "Compact sedan known for reliability, comfort, and ideal for long rides. Ideal for daily commutes and city rides.",
             features: [
                 "4 Passengers",
                 "Air Conditioning",
                 "3 Luggage Capacity",
-                "Fuel Efficient",
+                // "Fuel Efficient",
                 "Smooth City Drive",
             ],
             idealFor:
@@ -29,11 +29,11 @@ export default function FleetPage() {
         },
         {
             name: "Innova Crysta",
-            images: ["/suv.avif", "/suv_int.jpg"],
+            images: ["/suv.avif", "/suv_int.png"],
             description:
                 "Premium MPV with plush interiors, powerful performance, and ultimate comfort for long-distance travel.",
             features: [
-                "7 Passengers",
+                "6 Passengers",
                 "Air Conditioning",
                 "5-6 Luggage Capacity",
                 "Spacious Interiors",
@@ -43,12 +43,12 @@ export default function FleetPage() {
                 "Families, Corporate Travel, Outstation Journeys, Hill Station Trips",
         },
         {
-            name: "Tempo Traveller",
-            images: ["/tempo.webp", "/tempo_int.webp"],
+            name: "Tempo Traveller 20 seater",
+            images: ["/tempo_20.png", "/tempo_20_int.png"],
             description:
                 "The go-to choice for big groups, offering spacious interiors and comfortable seating for long trips together.",
             features: [
-                "12-17 Passengers",
+                "20 + Driver",
                 "Air Conditioning",
                 "10+ Luggage Capacity",
                 "Push-back Seats",
@@ -58,12 +58,42 @@ export default function FleetPage() {
                 "Large Families, Corporate Outings, Group Tours, Pilgrimage Trips",
         },
         {
-            name: "Urbania",
-            images: ["/urbania.jpg", "/urbania_int.avif"],
+            name: "Tempo Traveller 12 seater",
+            images: ["/tempo.png", "/tempo_int.png"],
+            description:
+                "The go-to choice for big groups, offering spacious interiors and comfortable seating for long trips together.",
+            features: [
+                "12 + Driver",
+                "Air Conditioning",
+                "10+ Luggage Capacity",
+                "Push-back Seats",
+                "Ample Leg Room",
+            ],
+            idealFor:
+                "Large Families, Corporate Outings, Group Tours, Pilgrimage Trips",
+        },
+        {
+            name: "Urbania 12 seater",
+            images: ["/urbania.png", "/urbania_int.png"],
             description:
                 "Luxury van with advanced features, offering business-class comfort and style for travel in larger groups.",
             features: [
-                "8-10 Passengers",
+                "12 Passengers",
+                "Premium Air Conditioning",
+                "6-7 Luggage Capacity",
+                "Luxury Interiors",
+                "Entertainment System",
+            ],
+            idealFor:
+                "Corporate Executives, Luxury Travelers, Special Events, VIP Transfers",
+        },
+        {
+            name: "Urbania 16 seater",
+            images: ["/urbania_16.png", "/urbania_16_int.png"],
+            description:
+                "Luxury van with advanced features, offering business-class comfort and style for travel in larger groups.",
+            features: [
+                "16 Passengers",
                 "Premium Air Conditioning",
                 "6-7 Luggage Capacity",
                 "Luxury Interiors",
@@ -89,7 +119,7 @@ export default function FleetPage() {
         },
         {
             name: "Ertiga",
-            images: ["/ertiga.avif", "/ertiga_int.avif", "/ertiga_space.webp"],
+            images: ["/ertiga.avif", "/ertiga_int.png", "/ertiga_space.webp"],
             description:
                 "A practical and spacious MPV offering comfort and efficiency for medium-sized families and groups.",
             features: [
