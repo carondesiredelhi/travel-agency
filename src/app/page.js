@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import TimedCards from "@/components/TimedCard/TimedCard";
+import PriceCalculator from "@/components/PriceCalculator";
 
 // Consistent icon component with theme colors
 const IconCheck = (props) => (
@@ -60,6 +61,8 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Price Calculator Section */}
+      <PriceCalculator />
 
       {/* Fleet Showcase Section - Consistent with theme */}
       <section className="py-20 bg-white">

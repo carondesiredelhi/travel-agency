@@ -1,13 +1,70 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
-export const metadata = {
-  title: 'Contact Us | Delhi Travel Agency',
-  description: 'Get in touch with our travel experts for booking inquiries, custom travel packages, and fleet services from Delhi to popular destinations.',
-  keywords: 'contact travel agency, delhi travel booking, travel inquiry, fleet booking'
-};
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
+    inquiryType: 'general'
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+  const [error, setError] = useState('');
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    setError('');
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    setError('');
+
+    try {
+      const response = await fetch('/api/contacts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+          inquiryType: 'general'
+        });
+      } else {
+        setSubmitStatus('error');
+        setError(result.error || 'Failed to submit inquiry');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      setError('Network error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -119,13 +176,41 @@ export default function Contact() {
             <div className="lg:w-2/3 bg-white p-8 rounded-xl shadow-lg animate-slide-up delay-200">
               <h2 className="text-3xl font-bold mb-6">Send us a <span className="text-yellow-600">Message</span></h2>
               
-              <form className="space-y-6">
+              {/* Success Message */}
+              {submitStatus === 'success' && (
+                <div className="mb-6 bg-green-50 border border-green-200 rounded-xl p-4">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-green-700 font-medium">Your inquiry has been submitted successfully! We'll get back to you within 24 hours.</span>
+                  </div>
+                </div>
+              )}
+
+              {/* Error Message */}
+              {submitStatus === 'error' && (
+                <div className="mb-6 bg-red-50 border border-red-200 rounded-xl p-4">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-red-700">{error}</span>
+                  </div>
+                </div>
+              )}
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Your Name</label>
                     <input 
                       type="text" 
                       id="name" 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300" 
                       placeholder="John Doe"
                     />
@@ -135,6 +220,10 @@ export default function Contact() {
                     <input 
                       type="email" 
                       id="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300" 
                       placeholder="john@example.com"
                     />
@@ -147,6 +236,9 @@ export default function Contact() {
                     <input 
                       type="tel" 
                       id="phone" 
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300" 
                       placeholder="+91 98765 43210"
                     />
@@ -156,16 +248,42 @@ export default function Contact() {
                     <input 
                       type="text" 
                       id="subject" 
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300" 
                       placeholder="Booking Inquiry"
                     />
                   </div>
+                </div>
+
+                <div>
+                  <label htmlFor="inquiryType" className="block text-gray-700 font-medium mb-2">Inquiry Type</label>
+                  <select 
+                    id="inquiryType" 
+                    name="inquiryType"
+                    value={formData.inquiryType}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300"
+                  >
+                    <option value="general">General Inquiry</option>
+                    <option value="booking">Booking Inquiry</option>
+                    <option value="fleet">Fleet Information</option>
+                    <option value="custom">Custom Package</option>
+                    <option value="complaint">Complaint</option>
+                    <option value="other">Other</option>
+                  </select>
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Your Message</label>
                   <textarea 
                     id="message" 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
                     rows="5" 
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-300" 
                     placeholder="Please provide details about your inquiry..."
@@ -174,9 +292,17 @@ export default function Contact() {
                 
                 <button 
                   type="submit" 
-                  className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105 transform"
+                  disabled={isSubmitting}
+                  className="bg-yellow-500 hover:bg-yellow-600 disabled:bg-yellow-400 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105 disabled:scale-100 transform disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <div className="flex items-center">
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Sending...
+                    </div>
+                  ) : (
+                    'Send Message'
+                  )}
                 </button>
               </form>
             </div>

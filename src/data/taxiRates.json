@@ -1,0 +1,574 @@
+{
+  "regions": {
+    "himachal": {
+      "name": "Himachal Pradesh",
+      "origins": {
+        "chandigarh": {
+          "name": "Chandigarh",
+          "rates": [
+            {
+              "duration": "2N/3D",
+              "destination": "Shimla",
+              "sedan": 10200,
+              "suv": 12800,
+              "tempo": 19500
+            },
+            {
+              "duration": "3N/4D",
+              "destination": "Shimla(2N) Chandigarh(1N)",
+              "sedan": 12000,
+              "suv": 16800,
+              "tempo": 26000
+            },
+            {
+              "duration": "3N/4D",
+              "destination": "Manali",
+              "sedan": 13700,
+              "suv": 18000,
+              "tempo": 27500
+            },
+            {
+              "duration": "4N/5D",
+              "destination": "Manali",
+              "sedan": 14500,
+              "suv": 21000,
+              "tempo": 32500
+            },
+            {
+              "duration": "5N/6D",
+              "destination": "Shimla(2N) Manali(3N)",
+              "sedan": 18000,
+              "suv": 25000,
+              "tempo": 40000
+            },
+            {
+              "duration": "6N/7D",
+              "destination": "Shimla(2N) Manali(3N) Dharamshala(1N)",
+              "sedan": 21000,
+              "suv": 28000,
+              "tempo": 45000
+            },
+            {
+              "duration": "7N/8D",
+              "destination": "Shimla(2N) Manali(3N) Dalhausie(2N)",
+              "sedan": 24000,
+              "suv": 31500,
+              "tempo": 53500
+            },
+            {
+              "duration": "8N/9D",
+              "destination": "Shimla(2N) Manali(3N) Dharamshala(2N) Dalhausie(1N)",
+              "sedan": 27000,
+              "suv": 36000,
+              "tempo": 58000
+            },
+            {
+              "duration": "9N/10D",
+              "destination": "Shimla(2N) Manali(3N) Dharamshala(2N) Dalhausie(2N)",
+              "sedan": 30000,
+              "suv": 40000,
+              "tempo": 65000
+            },
+            {
+              "duration": "10N/11D",
+              "destination": "Shimla(2N) Manali(3N) Dharamshala(2N) Dalhausie(2N) Amritsar(1N)",
+              "sedan": 32900,
+              "suv": 44000,
+              "tempo": 71500
+            }
+          ]
+        },
+        "delhi": {
+          "name": "Delhi",
+          "rates": [
+            {
+              "duration": "2N/3D",
+              "destination": "Shimla",
+              "sedan": 11500,
+              "suv": 17000,
+              "tempo": 22500
+            },
+            {
+              "duration": "3N/4D",
+              "destination": "Shimla(2N) Chandigarh(1N)",
+              "sedan": 13100,
+              "suv": 20000,
+              "tempo": 30000
+            },
+            {
+              "duration": "3N/4D",
+              "destination": "Manali",
+              "sedan": 15000,
+              "suv": 22000,
+              "tempo": 32500
+            },
+            {
+              "duration": "4N/5D",
+              "destination": "Manali",
+              "sedan": 17000,
+              "suv": 26000,
+              "tempo": 37500
+            },
+            {
+              "duration": "5N/6D",
+              "destination": "Shimla(2N) Manali(3N)",
+              "sedan": 20000,
+              "suv": 30000,
+              "tempo": 45000
+            },
+            {
+              "duration": "6N/7D",
+              "destination": "Shimla(2N) Manali(3N) Dharamshala(1N)",
+              "sedan": 23000,
+              "suv": 35000,
+              "tempo": 50000
+            },
+            {
+              "duration": "7N/8D",
+              "destination": "Shimla(2N) Manali(3N) Dalhausie(2N)",
+              "sedan": 25500,
+              "suv": 40500,
+              "tempo": 60000
+            },
+            {
+              "duration": "8N/9D",
+              "destination": "Shimla(2N) Manali(3N) Dharamshala(2N) Dalhausie(1N)",
+              "sedan": 28000,
+              "suv": 45000,
+              "tempo": 65000
+            },
+            {
+              "duration": "9N/10D",
+              "destination": "Shimla(2N) Manali(3N) Dharamshala(2N) Dalhausie(2N)",
+              "sedan": 31000,
+              "suv": 50000,
+              "tempo": 72000
+            },
+            {
+              "duration": "10N/11D",
+              "destination": "Shimla(2N) Manali(3N) Dharamshala(2N) Dalhausie(2N) Amritsar(1N)",
+              "sedan": 33700,
+              "suv": 55000,
+              "tempo": 84000
+            }
+          ]
+        }
+      },
+      "addOns": [
+        {
+          "destination": "Atal Tunnel",
+          "sedan": 1500,
+          "suv": 2000,
+          "tempo": 3500
+        },
+        {
+          "destination": "Atal & Sissu",
+          "sedan": 3000,
+          "suv": 4000,
+          "tempo": 5000
+        },
+        {
+          "destination": "Chamba",
+          "sedan": 2000,
+          "suv": 3000,
+          "tempo": 4000
+        },
+        {
+          "destination": "Manikaran (On the way)",
+          "sedan": 1800,
+          "suv": 2500,
+          "tempo": 3000
+        }
+      ]
+    },
+    "uttarakhand": {
+      "name": "Uttarakhand",
+      "origins": {
+        "dehradun": {
+          "name": "Dehradun",
+          "rates": [
+            {
+              "duration": "2N/3D",
+              "destination": "Haridwar & Rishikesh",
+              "sedan": 9000,
+              "suv": 13500,
+              "tempo": 19000
+            },
+            {
+              "duration": "2N/3D",
+              "destination": "Jim Corbett",
+              "sedan": 10500,
+              "suv": 16000,
+              "tempo": 21000
+            },
+            {
+              "duration": "3N/4D",
+              "destination": "Haridwar(1N) Mussoorie (2N)",
+              "sedan": 11000,
+              "suv": 18000,
+              "tempo": 22000
+            },
+            {
+              "duration": "3N/4D",
+              "destination": "Jim Corbett(1N) Nainital(2N)",
+              "sedan": 13700,
+              "suv": 19000,
+              "tempo": 29500
+            },
+            {
+              "duration": "4N/5D",
+              "destination": "Mussoorie(2N) Haridwar & Rishikesh(2N)",
+              "sedan": 14000,
+              "suv": 22000,
+              "tempo": 35000
+            },
+            {
+              "duration": "4N/5D",
+              "destination": "Nainital(3N) Corbett(1N)",
+              "sedan": 16000,
+              "suv": 22500,
+              "tempo": 37500
+            },
+            {
+              "duration": "5N/6D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N)",
+              "sedan": 18000,
+              "suv": 25000,
+              "tempo": 40000
+            },
+            {
+              "duration": "6N/7D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N) Rani-khet(1N)",
+              "sedan": 20000,
+              "suv": 28000,
+              "tempo": 45000
+            },
+            {
+              "duration": "7N/8D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N) Rani-khet(1N) Kausani(1N)",
+              "sedan": 22000,
+              "suv": 30000,
+              "tempo": 50000
+            },
+            {
+              "duration": "8N/9D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N) Rani-khet(1N) Kausani(2N)",
+              "sedan": 24000,
+              "suv": 32000,
+              "tempo": 55000
+            },
+            {
+              "duration": "9N/10D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N) Rani-khet(1N) Kausani(2N) Haridwar(1N)",
+              "sedan": 26000,
+              "suv": 35000,
+              "tempo": 60000
+            },
+            {
+              "duration": "10N/11D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N) Rani-khet(1N) Kausani(2N) Haridwar(2N)",
+              "sedan": 28000,
+              "suv": 38000,
+              "tempo": 65000
+            },
+            {
+              "duration": "11N/12D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N) Rani-khet(1N) Kausani(2N) Haridwar(2N) Rishikesh(1N)",
+              "sedan": 30000,
+              "suv": 40000,
+              "tempo": 70000
+            }
+          ]
+        },
+        "delhi": {
+          "name": "Delhi",
+          "rates": [
+            {
+              "duration": "2N/3D",
+              "destination": "Haridwar & Rishikesh",
+              "sedan": 10000,
+              "suv": 15000,
+              "tempo": 22000
+            },
+            {
+              "duration": "2N/3D",
+              "destination": "Jim Corbett",
+              "sedan": 10000,
+              "suv": 15000,
+              "tempo": 21000
+            },
+            {
+              "duration": "3N/4D",
+              "destination": "Haridwar(1N) Mussoorie (2N)",
+              "sedan": 13000,
+              "suv": 21500,
+              "tempo": 30000
+            },
+            {
+              "duration": "3N/4D",
+              "destination": "Jim Corbett(1N) Nainital(2N)",
+              "sedan": 13500,
+              "suv": 20000,
+              "tempo": 30000
+            },
+            {
+              "duration": "4N/5D",
+              "destination": "Mussoorie(2N) Haridwar & Rishikesh(2N)",
+              "sedan": 15500,
+              "suv": 24500,
+              "tempo": 37500
+            },
+            {
+              "duration": "4N/5D",
+              "destination": "Nainital(3N) Corbett(1N)",
+              "sedan": 15500,
+              "suv": 24500,
+              "tempo": 37500
+            },
+            {
+              "duration": "5N/6D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N)",
+              "sedan": 18000,
+              "suv": 28000,
+              "tempo": 45000
+            },
+            {
+              "duration": "6N/7D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N) Rani-khet(1N)",
+              "sedan": 20000,
+              "suv": 32000,
+              "tempo": 50000
+            },
+            {
+              "duration": "7N/8D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N) Rani-khet(1N) Kausani(1N)",
+              "sedan": 22000,
+              "suv": 35000,
+              "tempo": 55000
+            },
+            {
+              "duration": "8N/9D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N) Rani-khet(1N) Kausani(2N)",
+              "sedan": 24000,
+              "suv": 38000,
+              "tempo": 60000
+            },
+            {
+              "duration": "9N/10D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N) Rani-khet(1N) Kausani(2N) Haridwar(1N)",
+              "sedan": 26000,
+              "suv": 40000,
+              "tempo": 65000
+            },
+            {
+              "duration": "10N/11D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N) Rani-khet(1N) Kausani(2N) Haridwar(2N)",
+              "sedan": 28000,
+              "suv": 42000,
+              "tempo": 70000
+            },
+            {
+              "duration": "11N/12D",
+              "destination": "Mussoorie(2N) Corbett(1N) Nainital(2N) Rani-khet(1N) Kausani(2N) Haridwar(2N) Rishikesh(1N)",
+              "sedan": 30000,
+              "suv": 45000,
+              "tempo": 75000
+            }
+          ]
+        }
+      },
+      "addOns": [
+        {
+          "destination": "Dhanaulti",
+          "sedan": 2000,
+          "suv": 3000,
+          "tempo": 4000
+        },
+        {
+          "destination": "Mukteshwar",
+          "sedan": 2500,
+          "suv": 3500,
+          "tempo": 5000
+        },
+        {
+          "destination": "Baijnath",
+          "sedan": 2000,
+          "suv": 3000,
+          "tempo": 4000
+        }
+      ]
+    },
+    "rajasthan": {
+      "name": "Rajasthan",
+      "origins": {
+        "delhi": {
+          "name": "Delhi",
+          "rates": [
+            {
+              "duration": "1N/2D",
+              "destination": "Agra",
+              "sedan": 7500,
+              "suv": 11500,
+              "tempo": 14000
+            },
+            {
+              "duration": "2N/3D",
+              "destination": "Jaipur(2N)",
+              "sedan": 10500,
+              "suv": 16500,
+              "tempo": 24000
+            },
+            {
+              "duration": "2N/3D",
+              "destination": "Agra(1N) Delhi(1N)",
+              "sedan": 10500,
+              "suv": 12500,
+              "tempo": 22500
+            },
+            {
+              "duration": "2N/3D",
+              "destination": "Agra(1N) Mathura(1N)",
+              "sedan": 10500,
+              "suv": 14500,
+              "tempo": 22500
+            },
+            {
+              "duration": "3N/4D",
+              "destination": "Agra(1N) Jaipur(02N)",
+              "sedan": 14500,
+              "suv": 26000,
+              "tempo": 32000
+            },
+            {
+              "duration": "4N/5D",
+              "destination": "Delhi(1N) Agra(1N) Jaipur(2N)",
+              "sedan": 15500,
+              "suv": 27000,
+              "tempo": 34500
+            },
+            {
+              "duration": "5N/6D",
+              "destination": "Delhi(1N) Agra(1N) Bharatpur(1N) Jaipur(2N)",
+              "sedan": 16000,
+              "suv": 27500,
+              "tempo": 45000
+            },
+            {
+              "duration": "5N/6D",
+              "destination": "Delhi(1N) Agra(1N) Jaipur(2N) Pushkar/Ajmer(1N)",
+              "sedan": 17300,
+              "suv": 30000,
+              "tempo": 45000
+            },
+            {
+              "duration": "5N/6D",
+              "destination": "Delhi(2N) Agra(1N) Jaipur(2N)",
+              "sedan": 16600,
+              "suv": 28500,
+              "tempo": 45000
+            },
+            {
+              "duration": "6N/7D",
+              "destination": "Delhi(2N) Jaipur(2N) Jodhpur(2N)",
+              "sedan": 21000,
+              "suv": 37000,
+              "tempo": 52000
+            },
+            {
+              "duration": "6N/7D",
+              "destination": "Delhi(2N) Mathura(1N) Agra(1N) Bharatpur(1N) Jaipur(2N)",
+              "sedan": 19700,
+              "suv": 32000,
+              "tempo": 52000
+            },
+            {
+              "duration": "7N/8D",
+              "destination": "Delhi(2N) Agra(1N) Bharatpur(1) Jaipur(2N) Pushkar/Ajmer(1N)",
+              "sedan": 23500,
+              "suv": 40000,
+              "tempo": 60000
+            },
+            {
+              "duration": "7N/8D",
+              "destination": "Delhi(2N) Mathura(1N) Agra(1N) Bharatpur(1) Jaipur(2N) Pushkar/Ajmer(1N)",
+              "sedan": 23500,
+              "suv": 40000,
+              "tempo": 60000
+            },
+            {
+              "duration": "7N/8D",
+              "destination": "Delhi(2N) Mathura(1N) Ayodhya (2N) Agra(2N)",
+              "sedan": 24800,
+              "suv": 40500,
+              "tempo": 60000
+            },
+            {
+              "duration": "7N/8D",
+              "destination": "Delhi(2N) Mathura(1N) Ayodhya (2N) Agra(2N) Bharatpur(1N)",
+              "sedan": 25500,
+              "suv": 42000,
+              "tempo": 60000
+            },
+            {
+              "duration": "8N/9D",
+              "destination": "Delhi(2N) Mathura(1N) Ayodhya (2N) Lucknow(1N) Agra(2N)",
+              "sedan": 26000,
+              "suv": 47000,
+              "tempo": 68000
+            }
+          ]
+        }
+      },
+      "addOns": [
+        {
+          "destination": "Murthal Dhaba",
+          "sedan": 2500,
+          "suv": 3000,
+          "tempo": 6500
+        },
+        {
+          "destination": "Agra - Fatehpur Sikri - Agra",
+          "sedan": 1500,
+          "suv": 2000,
+          "tempo": 4500
+        },
+        {
+          "destination": "Choki Dhani",
+          "sedan": 2500,
+          "suv": 3000,
+          "tempo": 6000
+        }
+      ]
+    }
+  },
+  "vehicleTypes": {
+    "sedan": {
+      "name": "Sedan",
+      "capacity": "4+1",
+      "description": "Ideal for small families and couples"
+    },
+    "suv": {
+      "name": "SUV/Innova",
+      "capacity": "6+1",
+      "description": "Perfect for medium families and groups"
+    },
+    "tempo": {
+      "name": "Tempo Traveller",
+      "capacity": "12+1",
+      "description": "Best for large groups and extended families"
+    }
+  },
+  "inclusions": [
+    "Pickup and Drop off",
+    "All sightseeing's by individual car",
+    "Transfers: Destination - Hotel - Destination",
+    "Sightseeing's as per Tour Itinerary",
+    "All Toll, Taxes, Parking's Fees and Driver Allowance"
+  ],
+  "exclusions": [
+    "Meals / Air Tran fairs / Camera rides etc",
+    "Monuments entries fees during sightseeing's",
+    "Charges for early check in / late Checkout at hotel",
+    "Any other items not specified in package inclusions"
+  ]
+}
